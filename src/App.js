@@ -1,4 +1,4 @@
-import { Swtich, Route, Redirect } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
 import Header from './components/Header';
@@ -15,9 +15,21 @@ import './App.css';
 
 function App() {
   return (
-    <div className="App">
-<h1>App</h1>
-    </div>
+     <>
+     <Header />
+     <Switch>
+       <Route exact path="/">
+         <Home />
+       </Route>
+       <Route path="/login">
+         <Login />
+       </Route>
+       <Route path="/dashboard">
+         <Dashboard />
+       </Route>
+     </Switch>
+     <Footer />
+     </>
   );
 }
 
