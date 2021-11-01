@@ -1,8 +1,12 @@
+import { StyledMain } from '../styles'
+import { login } from '../services/firebase'
+
 const Login = (props) => {
     return (
-        <main>
+        <StyledMain>
             <h1>Login</h1>
-        </main>
+            <button onClick={login}>Sign in with Google</button>
+        </StyledMain>
     )
 };
 export default Login;
