@@ -2,32 +2,29 @@ import firebase from 'firebase/app';
 import 'firebase/auth';
 
 const firebaseConfig = {
-    apiKey: "AIzaSyCRGX8CZ50RVBpYa5Q6zQ82frhj5fDtjIU",
-    authDomain: "rule-of-thumb-31aa1.firebaseapp.com",
-    projectId: "rule-of-thumb-31aa1",
-    storageBucket: "rule-of-thumb-31aa1.appspot.com",
-    messagingSenderId: "1009741313431",
-    appId: "1:1009741313431:web:6f074b63be561905b700d2"
-  };
+    apiKey: "AIzaSyBsGcq8gHhYC30Uj2RhjvS4YSoP9fFEzyw",
+    authDomain: "react-dev-skills-56228.firebaseapp.com",
+    projectId: "react-dev-skills-56228",
+    storageBucket: "react-dev-skills-56228.appspot.com",
+    messagingSenderId: "624710490709",
+    appId: "1:624710490709:web:30b29e35e60cd4f9d412dc"
+};
 
-  firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-// set up auth
-
+const provider = new firebase.auth.GoogleAuthProvider();
 const auth = firebase.auth();
-const provider = new GoogleAuthProvider();
 
-
-function signIn() {
-    return signInWithPopup(auth, provider);
+function login() {
+    return auth.signInWithPopup(provider);
 }
 
-function signOut() {
+function logout() {
     return auth.signOut();
 }
 
 export {
     auth,
-    signIn,
-    logOut
+    login,
+    logout,
 }
