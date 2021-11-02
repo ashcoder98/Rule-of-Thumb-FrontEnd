@@ -26,7 +26,7 @@ useEffect(() => {
 
   return (
      <>
-     <Header />
+     <Header user={user}/>
      <Switch>
        <Route exact path="/">
          <Home />

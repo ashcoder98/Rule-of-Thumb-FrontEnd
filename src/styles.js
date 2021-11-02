@@ -15,10 +15,15 @@ nav {
     ul {
         display: flex;
         list-style: none;
+        
         li {
             margin-right: 1.5rem;
             font-size: 1.5rem;
             font-weight: 600;
+            img {
+                height: 50px;
+                border-radius: 50%;
+            }
             a {
                 text-decoration: none;
                 color: inherit;
@@ -38,5 +43,5 @@ export const StyledMain = styled.main`
  display: flex;
  justify-content: center;
  align-items: center;
- 
+
 `;
