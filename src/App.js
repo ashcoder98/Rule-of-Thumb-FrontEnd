@@ -14,6 +14,16 @@ import './App.css';
 
 
 function App() {
+const [ user, setUser ] = useState(null);
+
+useEffect(() => {
+ const unsubscribe =  auth.onAuthStateChanged(user => setUser(user));
+ return () => unsubscribe();
+}, [])
+
+
+
+
   return (
      <>
      <Header />

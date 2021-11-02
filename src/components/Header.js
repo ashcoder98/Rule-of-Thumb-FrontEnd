@@ -10,7 +10,7 @@ const Header = (props) => {
             <nav>
                 <ul>
                     <li>
-                        <Link>Login</Link>
+                        <Link to="/login">Login</Link>
                     </li>
                             <li onClick={logout}>
                                  Logout
