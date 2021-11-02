@@ -20,6 +20,9 @@ nav {
             margin-right: 1.5rem;
             font-size: 1.5rem;
             font-weight: 600;
+            li:hover {
+                cursor: pointer;
+            }
             img {
                 height: 50px;
                 border-radius: 50%;

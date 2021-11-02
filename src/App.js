@@ -2,7 +2,6 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
 import Header from './components/Header';
-import Footer from './components/Footer';
 
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -11,7 +10,13 @@ import Dashboard from './pages/Dashboard';
 import { auth } from './services/firebase';
 import './App.css';
 
-
+// const ProtectedRoute = ({user, component}) => {
+//   if(props.user) {
+//     return 
+//   } else {
+//     return <Redirect to="/login" />
+//   }
+// }
 
 function App() {
 const [ user, setUser ] = useState(null);
@@ -21,9 +26,6 @@ useEffect(() => {
  return () => unsubscribe();
 }, [])
 
-
-
-
   return (
      <>
      <Header user={user}/>
@@ -31,14 +33,14 @@ useEffect(() => {
        <Route exact path="/">
          <Home />
        </Route>
-       <Route path="/login">
-         <Login />
-       </Route>
-       <Route path="/dashboard">
-         <Dashboard />
-       </Route>
+       <Route path="/login" render={() => (
+        user ? <Redirect to="/dashboard"/> : <Login />
+       )}/>
+       <Route path="/dashboard" render={() => (
+        user ? <Dashboard /> : <Redirect to="/login" />
+       )}/>
      </Switch>
-     <Footer />
+
      </>
   );
 }
