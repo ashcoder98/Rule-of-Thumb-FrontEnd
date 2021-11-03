@@ -8,6 +8,7 @@ import Login from './pages/Login';
 import Dashboard from './pages/Dashboard';
 
 import { auth } from './services/firebase';
+
 import './App.css';
 
 // const ProtectedRoute = ({user, component}) => {

@@ -1,3 +1,4 @@
+import { findByLabelText } from '@testing-library/react';
 import styled from 'styled-components';
 
 export const StyledHeader = styled.header`
@@ -6,6 +7,7 @@ align-items: center;
 justify-content: space-between;
 padding-left: 1rem;
 height: 5rem;
+width: 2560px;
 background-color: black;
 color: white;
 box-shadow: 1px 1px 3px 2px #808080;
@@ -36,12 +38,11 @@ nav {
     }
 }
 `;
-
-
 export const StyledMain = styled.main`
- flex-grow: 1;
+ /* flex-grow: 1; */
  display: flex;
  justify-content: center;
  align-items: center;
 
 `;
+
