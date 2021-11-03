@@ -8,12 +8,14 @@ justify-content: space-between;
 padding-left: 1rem;
 height: 5rem;
 width: 2560px;
-background-color: black;
+background-color: #b63030;
 color: white;
 box-shadow: 1px 1px 3px 2px #808080;
 nav {
     display: flex;
     align-items: center;
+    margin: 1rem;
+    padding: .5rem;
     ul {
         display: flex;
         list-style: none;
