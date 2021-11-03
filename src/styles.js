@@ -7,7 +7,7 @@ align-items: center;
 justify-content: space-between;
 padding-left: 1rem;
 height: 5rem;
-width: 2560px;
+width: 100vw;
 background-color: #b63030;
 color: white;
 box-shadow: 1px 1px 3px 2px #808080;
