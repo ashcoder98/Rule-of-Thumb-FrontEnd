@@ -20,11 +20,10 @@ const URL = "http://localhost:3001/dashboard";
 
 const getAdvice = async () => {
     const response = await fetch(URL);
-    const data = response.json();
+    const data = await response.json();
     setAdvice(data);
 };
 const createAdvice = async (advice) => {
-  console.log(advice)
     await fetch(URL, {
         method: "POST",
         header: {
@@ -46,7 +45,7 @@ useEffect(()=> getAdvice(), []);
         user ? <Redirect to="/dashboard"/> : <Login />
        )}/>
        <Route path="/dashboard" render={() => (
-        user ? <Dashboard advice={advice} createAdvice={createAdvice} /> : <Redirect to="/login" />
+        user ? <Dashboard  advice={advice} createAdvice={createAdvice} /> : <Redirect to="/login" />
        )}/>
      </Switch>
 

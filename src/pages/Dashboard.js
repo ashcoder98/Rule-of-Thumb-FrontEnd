@@ -16,12 +16,22 @@ const Dashboard = (props) => {
         username: "",
         advice: ""
         })
-    }
-    // const loaded = () => {
-    //     return props.
-    // }
-    return (
+    };
+const loaded = () => {
+console.log(props.advice)
+    return props.advice.map((advice) => (
         
+        <div key={advice._id} className="advicecard">
+            <h2>{advice.username}</h2>
+            <p>{advice.advice}</p>
+        </div>
+    ))
+}
+    const loading = () => {
+        return <h1>Have no fear..Advice is on the way..</h1>
+    };
+
+ return (  
 <section>
     <form onSubmit={handleSubmit}>
         <input 
@@ -42,9 +52,11 @@ const Dashboard = (props) => {
         onChange={handleChange}/>
 <input type="submit" value="Add Advice" />
     </form>
+     {props.advice ? loaded() : loading()}
 </section>
-
-    );
+ 
+ 
+ );
 }
 export default Dashboard;
 
