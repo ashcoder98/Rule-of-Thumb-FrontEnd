@@ -18,7 +18,7 @@ function App() {
      <>
       <Header
       //  user={user}
-       />
+ />
       <Main />
 
      </>
