@@ -8,12 +8,12 @@ import { auth } from '../services/firebase';
 
 
 function Main() {
-const [ user, setUser ] = useState(null);
+// const [ user, setUser ] = useState(null);
 
-useEffect(() => {
- const unsubscribe =  auth.onAuthStateChanged(user => setUser(user));
- return () => unsubscribe();
-}, []);
+// useEffect(() => {
+//  const unsubscribe =  auth.onAuthStateChanged(user => setUser(user));
+//  return () => unsubscribe();
+// }, []);
 
 const [ advice, setAdvice ] = useState([]);
 const URL = "https://rule-of-thumb-ga.herokuapp.com/dashboard";
@@ -43,10 +43,15 @@ useEffect(()=> getAdvice(), []);
          <Home />
        </Route>
        <Route path="/login" render={() => (
-        user ? <Redirect to="/dashboard"/> : <Login />
+        // user ?
+         <Redirect to="/dashboard"/> 
+        //  : <Login />
        )}/>
        <Route path="/dashboard" render={() => (
-        user ? <Dashboard  advice={advice} createAdvice={createAdvice} /> : <Redirect to="/login" />
+        // user ? 
+        <Dashboard  advice={advice} createAdvice={createAdvice} /> 
+        // : <Redirect to="/login" 
+        // />
        )}/>
      </Switch>
 
