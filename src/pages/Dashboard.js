@@ -6,6 +6,20 @@ const Dashboard = (props) => {
         username: "",
         advice: ""
     });
+    const handleChange = (event) => {
+        setNewForm(prevState => ({...prevState, [event.target.name]: event.target.value }));
+    };
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        props.createAdvice(newForm);
+        setNewForm({
+        username: "",
+        advice: ""
+        })
+    }
+    // const loaded = () => {
+    //     return props.
+    // }
     return (
         
 <section>
@@ -26,10 +40,16 @@ const Dashboard = (props) => {
         name="advice" 
         placeholder="type your advice here"
         onChange={handleChange}/>
-
+<input type="submit" value="Add Advice" />
     </form>
 </section>
 
     );
 }
 export default Dashboard;
+
+
+// QUESTIONS FOR IAN
+// 1. Why is it failing to fetch the URL?
+// 2. Should the add advice be a seperate component?
+// 3. 

@@ -24,6 +24,7 @@ const getAdvice = async () => {
     setAdvice(data);
 };
 const createAdvice = async (advice) => {
+  console.log(advice)
     await fetch(URL, {
         method: "POST",
         header: {
@@ -33,6 +34,7 @@ const createAdvice = async (advice) => {
     });
     getAdvice();
 }
+useEffect(()=> getAdvice(), []);
   return (
      <>
     
