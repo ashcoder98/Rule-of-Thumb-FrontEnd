@@ -24,9 +24,10 @@ const getAdvice = async () => {
     setAdvice(data);
 };
 const createAdvice = async (advice) => {
+  console.log(advice)
     await fetch(URL, {
         method: "POST",
-        header: {
+        headers: {
             "Content-type": "Application/json",
         },
         body: JSON.stringify(advice),

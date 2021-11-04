@@ -8,6 +8,7 @@ const Dashboard = (props) => {
     });
     const handleChange = (event) => {
         setNewForm(prevState => ({...prevState, [event.target.name]: event.target.value }));
+        console.log(newForm)
     };
     const handleSubmit = (event) => {
         event.preventDefault();
