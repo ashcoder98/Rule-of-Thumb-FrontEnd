@@ -15,7 +15,24 @@ useEffect(() => {
  return () => unsubscribe();
 }, []);
 
+const [ advice, setAdvice ] = useState([]);
+const URL = "http://localhost:3001/dashboard";
 
+const getAdvice = async () => {
+    const response = await fetch(URL);
+    const data = response.json();
+    setAdvice(data);
+};
+const createAdvice = async (advice) => {
+    await fetch(URL, {
+        method: "POST",
+        header: {
+            "Content-type": "Application/json",
+        },
+        body: JSON.stringify(advice),
+    });
+    getAdvice();
+}
   return (
      <>
     
