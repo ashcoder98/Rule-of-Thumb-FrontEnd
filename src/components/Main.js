@@ -44,7 +44,7 @@ const createAdvice = async (advice) => {
         user ? <Redirect to="/dashboard"/> : <Login />
        )}/>
        <Route path="/dashboard" render={() => (
-        user ? <Dashboard /> : <Redirect to="/login" />
+        user ? <Dashboard advice={advice} createAdvice={createAdvice} /> : <Redirect to="/login" />
        )}/>
      </Switch>
 

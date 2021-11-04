@@ -1,19 +1,35 @@
 import '../App.css';
+import { useState } from 'react'
 
 const Dashboard = (props) => {
+    const [ newForm, setNewForm ] = useState({
+        username: "",
+        advice: ""
+    });
     return (
-        <main className="dashboard">
-        <div className="box">
-    <h1>Topic</h1>
-        </div>
-<div className="box">
-    <h1>Advice Board</h1>
-</div>
-<div className="box">
-    <h1>Add New Advice</h1>
-    </div>
+        
+<section>
+    <form onSubmit={handleSubmit}>
+        <input 
+        type="text" 
+        value={newForm.username}
+        name="username" 
+        placeholder="username"
+        onChange={handleChange}/>
 
-        </main>
-    )
-};
+
+        <textarea 
+        rows="10"
+        cols="10"
+        type="text" 
+        value={newForm.advice}
+        name="advice" 
+        placeholder="type your advice here"
+        onChange={handleChange}/>
+
+    </form>
+</section>
+
+    );
+}
 export default Dashboard;
