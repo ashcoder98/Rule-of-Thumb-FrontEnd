@@ -2,9 +2,9 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { useState, useEffect } from 'react'
 
 import Home from '../pages/Home';
-import Login from '../pages/Login';
+// import Login from '../pages/Login';
 import Dashboard from '../pages/Dashboard';
-import { auth } from '../services/firebase';
+// import { auth } from '../services/firebase';
 
 
 function Main() {

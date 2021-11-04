@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { logout } from '../services/firebase';
+// import { logout } from '../services/firebase';
 import { StyledHeader } from '../styles.js';
 
 const Header = (props) => {
