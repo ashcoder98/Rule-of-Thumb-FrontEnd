@@ -8,10 +8,11 @@ html {
   display: flex;
   align-items: center;
   justify-content: center;
+ 
 }
 main {
   display: flex;
-  border: 5px black;
+  
   justify-content: center;
   align-items: center;
   width: 100vw;
@@ -21,27 +22,7 @@ main {
 .dashboard {
   width: 100vw;
 }
+
 .box {
-  /* justify-content: center; */
-display: flex;
-align-items: center;
-border: solid #000;
-border-width: 10 1px;
-margin: 10rem;
-padding: 12rem;
-padding-top: 37rem;
-padding-bottom: 37rem;
-/* background-color: #b63030;
-box-shadow: 1px 1px 3px 2px #808080; */
+  border: 1px solid red;
 }
-
-#dash {
-  display: flex;
-  width: 200px;
-  padding-top: 32rem;
-padding-bottom: 32rem;
-  padding-left : 15rem;
-  padding-right: 15rem;
-
-}
-

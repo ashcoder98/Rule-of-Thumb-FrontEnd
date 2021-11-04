@@ -3,12 +3,15 @@ import '../App.css';
 const Dashboard = (props) => {
     return (
         <main className="dashboard">
-
-            <h1 className="box" id="topic">Topic</h1>
-  
-            <h1 className="box" id="dash">Dash Board</h1>
-  
-            <h1 className="box"id="new">Add Advice</h1>
+        <div className="box">
+    <h1>Topic</h1>
+        </div>
+<div className="box">
+    <h1>Advice Board</h1>
+</div>
+<div className="box">
+    <h1>Add New Advice</h1>
+    </div>
 
         </main>
     )

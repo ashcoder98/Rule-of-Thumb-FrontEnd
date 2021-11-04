@@ -1,49 +1,26 @@
-import { Switch, Route, Redirect } from 'react-router-dom';
-import { useState, useEffect } from 'react'
-
-import Header from './components/Header';
-
-import Home from './pages/Home';
-import Login from './pages/Login';
-import Dashboard from './pages/Dashboard';
-
-import { auth } from './services/firebase';
-
+import Header from './components/Header.js';
+import Main from "./components/Main.js";
 import './App.css';
 
-// const ProtectedRoute = ({user, component}) => {
-//   if(props.user) {
-//     return 
-//   } else {
-//     return <Redirect to="/login" />
-//   }
-// }
+import { useState, useEffect } from 'react'
+import { auth } from './services/firebase';
+
 
 function App() {
-const [ user, setUser ] = useState(null);
+  const [ user, setUser ] = useState(null);
+  useEffect(() => {
+   const unsubscribe =  auth.onAuthStateChanged(user => setUser(user));
+   return () => unsubscribe();
+  }, [])
 
-useEffect(() => {
- const unsubscribe =  auth.onAuthStateChanged(user => setUser(user));
- return () => unsubscribe();
-}, [])
 
-  return (
+      return (
      <>
-     <Header user={user}/>
-     <Switch>
-       <Route exact path="/">
-         <Home />
-       </Route>
-       <Route path="/login" render={() => (
-        user ? <Redirect to="/dashboard"/> : <Login />
-       )}/>
-       <Route path="/dashboard" render={() => (
-        user ? <Dashboard /> : <Redirect to="/login" />
-       )}/>
-     </Switch>
+      <Header user={user}/>
+      <Main />
 
      </>
-  );
+  )
 }
 
 export default App;
