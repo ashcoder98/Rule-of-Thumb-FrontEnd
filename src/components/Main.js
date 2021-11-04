@@ -16,7 +16,7 @@ useEffect(() => {
 }, []);
 
 const [ advice, setAdvice ] = useState([]);
-const URL = "http://localhost:3001/dashboard";
+const URL = "https://rule-of-thumb-ga.herokuapp.com/dashboard";
 
 const getAdvice = async () => {
     const response = await fetch(URL);
