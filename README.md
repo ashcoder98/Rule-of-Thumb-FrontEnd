@@ -3,11 +3,11 @@ This a de-coupled, full-stack application, that records advice that users submit
 ![Live Server Screenshot](./img/Home.jpeg)
 ![Live Server Screenshot](./img/Dashboard.jpeg)
 ## Technologies Used
--React
--Node 
--Express 
--Mongoose 
--MongoDB
+- React
+- Node 
+- Express 
+- Mongoose 
+- MongoDB
 ## Getting Started
 This is my trello board I made to plan out my project. 
 https://trello.com/b/IdMEBeDi/project-3
