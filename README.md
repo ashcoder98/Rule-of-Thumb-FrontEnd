@@ -9,9 +9,9 @@ This a de-coupled, full-stack application, that records advice that users submit
 - Mongoose 
 - MongoDB
 ## Getting Started
-This is my trello board I made to plan out my project. 
+### This is my trello board I made to plan out my project. 
 https://trello.com/b/IdMEBeDi/project-3
-And here is the deployed app link.
+### And here is the deployed app link.
 https://ruleofthumbga.netlify.app/
 ## Unsolved Problems
 I have to solve an authentication problem with Google Firebase.
