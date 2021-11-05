@@ -44,7 +44,7 @@ console.log(props.advice)
 
 
         <textarea 
-        rows="10"
+        rows="5"
         cols="10"
         type="text" 
         value={newForm.advice}

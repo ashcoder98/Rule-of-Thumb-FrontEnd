@@ -26,3 +26,28 @@ main {
 .box {
   border: 1px solid red;
 }
+
+section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.advicecard {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+  border-radius: 9px;
+  background: #b63030;
+  box-shadow:  5px 5px 0px #491313,
+               -5px -5px 0px #ff4d4d;
+width: 30rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+}
