@@ -16,6 +16,6 @@ https://ruleofthumbga.netlify.app/
 ## Unsolved Problems
 I have to solve an authentication problem with Google Firebase.
 ## Future Enhancements
--I want to have a user be able to have FULL CRUD capability. 
--I want a user's post to be tagged with their username from when the authenticate yourself.
--I want a user be authenticated in order to post a piece of advice.
+- I want to have a user be able to have FULL CRUD capability. 
+- I want a user's post to be tagged with their username from when the authenticate yourself.
+- I want a user be authenticated in order to post a piece of advice.
