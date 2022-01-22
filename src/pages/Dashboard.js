@@ -53,7 +53,7 @@ console.log(props.advice)
     name="advice" 
     placeholder="type your advice here"
     onChange={handleChange}/>
-<input type="submit" value="Add Advice" />
+<input className='submit' type="submit" value="Add Advice" />
     </form>
     </section>
     <div className='advice-section'>
