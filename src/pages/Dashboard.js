@@ -33,7 +33,10 @@ console.log(props.advice)
     };
 
  return (  
-<section>
+     <div>
+
+     <section>
+
     <form onSubmit={handleSubmit}>
         <input 
         type="text" 
@@ -43,18 +46,21 @@ console.log(props.advice)
         onChange={handleChange}/>
 
 
-        <textarea 
-        rows="5"
-        cols="10"
-        type="text" 
-        value={newForm.advice}
-        name="advice" 
-        placeholder="type your advice here"
-        onChange={handleChange}/>
+        <input
+    
+    type="text" 
+    value={newForm.advice}
+    name="advice" 
+    placeholder="type your advice here"
+    onChange={handleChange}/>
 <input type="submit" value="Add Advice" />
     </form>
+    </section>
+    <div className='advice-section'>
      {props.advice ? loaded() : loading()}
-</section>
+    </div>
+    </div>
+
  
  
  );
