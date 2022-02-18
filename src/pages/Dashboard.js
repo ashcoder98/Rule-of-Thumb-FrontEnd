@@ -36,7 +36,8 @@ console.log(props.advice)
      <div>
 
      <section>
-
+    <h2>Welcome!</h2>
+    <h3>Share any advice you'd like!</h3>
     <form onSubmit={handleSubmit}>
         <input 
         type="text" 
@@ -68,7 +69,3 @@ console.log(props.advice)
 export default Dashboard;
 
 
-// QUESTIONS FOR IAN
-// 1. Why is it failing to fetch the URL?
-// 2. Should the add advice be a seperate component?
-// 3. 
